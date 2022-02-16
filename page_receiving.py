@@ -1,10 +1,10 @@
 from selenium import webdriver
-from config import PATH_GECKODRIVER, USER_NAME, PASSWORD
+from config import PATH_GECKODRIVER, USER_NAME, PASSWORD, URL_USER
 import time
 
 # Request for access
 browser = webdriver.Firefox(executable_path=PATH_GECKODRIVER)
-browser.get('https://www.instagram.com/hinevics/following/')
+browser.get(URL_USER)
 time.sleep(2)
 username_el = browser.find_element_by_name('username')
 password_el = browser.find_element_by_name('password')
